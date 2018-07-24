@@ -13,3 +13,8 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
     3. Weird Love Childs
 2. Heap Exploitation
 3. Stack Exploitation
+
+## Heap Exploitation
+### malloc() inner workings
+To understand how to beat the heap, you got to understand how it grows.
+
