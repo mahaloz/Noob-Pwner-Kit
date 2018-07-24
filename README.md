@@ -8,4 +8,8 @@ hope you enjot the kit.
 ## Background
 Binary Pwning can be devided into a few parts that tend to intertwine out in the wild.
 1. Reverse Engineering
-⋅⋅1. Other stuff
+    1. Static Analysis
+    2. Dynamic Analysis
+    3. Weird Love Childs
+2. Heap Exploitation
+3. Stack Exploitation
