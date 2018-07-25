@@ -27,9 +27,9 @@ complicates the entire process and makes it easier to use malloc().
 
 ptmalloc2 is something that abstracts the tracking of the heap (i.e. its size and 
 location). This abstraction is broken into three layers:
-    1. arena: Top, reliant on sbrk() and mmap().
-    2. heap: single contiguous memory region recording each mmap() we call to grow the arena. 
-    3. chunk: Bottom, free places, great place to attack.
+1. arena: Top, reliant on sbrk() and mmap().
+2. heap: single contiguous memory region recording each mmap() we call to grow the arena. 
+3. chunk: Bottom, free places, great place to attack.
 
 NOTE: for more info see [this](https://medium.com/@c0ngwang/the-art-of-exploiting-heap-overflow-part-4-4f1140585210)
 
