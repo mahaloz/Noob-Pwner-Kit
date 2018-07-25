@@ -34,8 +34,33 @@ location). This abstraction is broken into three layers:
 NOTE: for more info see [this](https://medium.com/@c0ngwang/the-art-of-exploiting-heap-overflow-part-4-4f1140585210)
 
 ### Chunk and malloc()
+Each chunk has a header which says if its free or not for use. When malloc() is used, the size of the header is added to whatever the size requested is. The header is placed at the beginning of the chunk, **easy to edit if you know the address of the memory**. 
+The header should look something like this:
+```c
+    struct chunk {
+    INTERNAL_SIZE_T      mchunk_prev_size;
+    INTERNAL_SIZE_T      mchunk_size;
+    struct malloc_chunk* fd;
+    struct malloc_chunk* bk;
+    }
+```
+Because each header should be linked to the last chunk, we have the linkedlist apporach.
+#### Sorting these chuncks
+When malloc() is activated we use chunks. Chunks are sorted in a few ways.
+1. Fast Bins
+It contains 10 types of chunks based on their size.
+![alt text](https://cdn-images-1.medium.com/max/1600/1*vKesMDWlcOf0EHRMJKNIjg.png)
+They are sorted in LIFO (Last In, First Out).
+2. Normal Bins
+    1. Unsorted: Only for temp bins being moved to other normal bins. Doubly linked.
+    2. Small: 62 types just like fast starting at 8-bytes. Doubly linked, FIFO.
+    3. Large: Chunks between 512 bytes - 128k bytes.
+Larger than that an mmap() does it directly.
 
 
 
 
+### Resources
+[https://www.blackhat.com/presentations/bh-usa-07/Ferguson/Presentation/bh-usa-07-ferguson.pdf] - condensed info on fastbins and such
+ 
 
