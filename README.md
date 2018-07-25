@@ -50,6 +50,7 @@ When malloc() is activated we use chunks. Chunks are sorted in a few ways.
 1. Fast Bins
 It contains 10 types of chunks based on their size.
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*vKesMDWlcOf0EHRMJKNIjg.png)
+
 They are sorted in LIFO (Last In, First Out).
 2. Normal Bins
     1. Unsorted: Only for temp bins being moved to other normal bins. Doubly linked.
@@ -61,6 +62,6 @@ Larger than that an mmap() does it directly.
 
 
 ### Resources
-[https://www.blackhat.com/presentations/bh-usa-07/Ferguson/Presentation/bh-usa-07-ferguson.pdf] - condensed info on fastbins and such
+(blackhat-pres)[https://www.blackhat.com/presentations/bh-usa-07/Ferguson/Presentation/bh-usa-07-ferguson.pdf] - condensed info on fastbins and such
  
 
