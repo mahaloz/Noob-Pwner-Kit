@@ -48,7 +48,7 @@ Because each header should be linked to the last chunk, we have the linkedlist a
 #### Sorting these chuncks
 When malloc() is activated we use chunks. Chunks are sorted in a few ways.
 1. Fast Bins
-It contains 10 types of chunks based on their size.
+It contains 10 types of chunks based on their size malloc() in bytes.
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*vKesMDWlcOf0EHRMJKNIjg.png)
 
 They are sorted in LIFO (Last In, First Out).
