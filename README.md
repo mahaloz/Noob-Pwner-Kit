@@ -58,6 +58,8 @@ When malloc() is activated we use chunks. Chunks are sorted in a few ways.
     3. Large: Chunks between 512 bytes - 128k bytes.
 Larger than that an mmap() does it directly.
 
+### Abusing linked chunks
+
 
 
 
