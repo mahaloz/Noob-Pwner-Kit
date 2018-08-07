@@ -11,9 +11,9 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
     1. Static Analysis
     2. Dynamic Analysis
     3. Weird Love Childs
-2. Heap Exploitation
+2. [Heap Exploitation](#heap-exploitation)
 3. Stack Exploitation
-4. [Shellcoding](#Shellcoding)
+4. [Shellcoding](#shellcoding)
 5. Network Program Exploitation
 6. Misc
 
@@ -106,7 +106,10 @@ Luckily, assembly has an easy way to call system calls, which each has a value i
 The x86 table can be found here: [x86 Table](https://syscalls.kernelgrok.com/)
 The x64 table can be found here: [x64 Table](https://filippo.io/linux-syscall-table/)
 
-The above values will be used when we call the 
+The above values will be used when we call the syscalls in an assembler convention.
+For the continued example, we will assume x86 achitecture is used.
+
+ 
 
 
 
