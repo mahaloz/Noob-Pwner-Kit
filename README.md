@@ -66,4 +66,40 @@ Larger than that an mmap() does it directly.
 ### Resources
 (blackhat-pres)[https://www.blackhat.com/presentations/bh-usa-07/Ferguson/Presentation/bh-usa-07-ferguson.pdf] - condensed info on fastbins and such
  
+## Shellcoding
+
+Shellcoding must be used every now-and-then to exploit a system in a customizable, yet highly restricted, byte code.
+Shellcoding consists of:
+1. Ideallizing your C code that is wanted for execution
+2. Convert your C code into assembly
+3. Remove Nullbytes (most times) from your assembly
+4. Assure your shellcode is small (or big) enough to fit in your designated buffer
+5. Convert assmbly into bytes [see 3].
+6. Get those bytes into your exploited program
+
+Each section consists of roadblocks and tools that are needed to get the job done that often circle each step,
+similar to the scientific method.
+
+### C Code Creation (CCC)
+CCC is the first step to making a *killer* of a exploit.
+This step is arbitrarily hard to explain becasue each CCC is different in the scenario.
+For your convience, a shellcode example is provided:
+
+#### Open, Read, Write
+Consider you have program with which you can inject shellcode to execute. For this problem, the functions we are allowed to use
+are Open, Read, and Write. The flags name is "flag".
+The C code would look something like this:
+```C
+int fd = open("flag", O_RDONLY) //open the file
+char* buf;
+read(fd, buf, 1024) //assuming the flag is no bigger than 1024
+write(1, buf, 1024) //write to stdout
+```
+
+
+
+
+
+
+
 
