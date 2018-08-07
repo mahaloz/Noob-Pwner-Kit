@@ -13,6 +13,9 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
     3. Weird Love Childs
 2. Heap Exploitation
 3. Stack Exploitation
+4. [Shellcoding](#Shellcoding)
+5. Network Program Exploitation
+6. Misc
 
 ## Heap Exploitation
 ### Heap Layout
@@ -95,7 +98,15 @@ char* buf;
 read(fd, buf, 1024) //assuming the flag is no bigger than 1024
 write(1, buf, 1024) //write to stdout
 ```
+the next part is translating this to asm.
 
+### Assembling maddness
+Continuing on our C code example we need to convert these system calls into assembly.
+Luckily, assembly has an easy way to call system calls, which each has a value in hex.
+The x86 table can be found here: [x86 Table](https://syscalls.kernelgrok.com/)
+The x64 table can be found here: [x64 Table](https://filippo.io/linux-syscall-table/)
+
+The above values will be used when we call the 
 
 
 
