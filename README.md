@@ -22,7 +22,7 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
 To understand how to beat the heap, you got to understand where it lives.
 The heap exsists under the .data allocation area (the place the actual program code
 is located). It grows down towards the Stack, while the Stack grows up towards it.
-So, the heap is located between the .data and the Stack. The heap is mainly controled byglibc. 
+So, the heap is located between the .data and the Stack. The heap is mainly controled by glibc. 
 
 The functions used to control the heap are sbrk(), mmap(), and malloc() & free(). 
 sbrk() and mmap() actually address memory once the initial heap is done, which
