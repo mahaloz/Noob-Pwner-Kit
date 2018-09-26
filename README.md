@@ -110,8 +110,7 @@ The above values will be used when we call the syscalls in an assembler conventi
 For the continued example, we will assume x64 architecture is used. Calling conventions can be found here: [x86 & x64 Calling Conventions](https://en.wikipedia.org/wiki/X86_calling_conventions)
 
 Starting with the open function, we need to start passing parameters to registers.
-First we start with the RSI
- 
+The open function takes three parameteres: 
 
 
 
