@@ -12,10 +12,15 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
     2. Dynamic Analysis
     3. Weird Love Childs
 2. [Heap Exploitation](#heap-exploitation)
-3. Stack Exploitation
+3. [Stack Exploitation & ROP](#stack-exploitation-&-rop)
 4. [Shellcoding](#shellcoding)
 5. Network Program Exploitation
 6. Misc
+
+## Stack Exploitation & Rop
+### ROP
+Return Oriented Programming (ROP) is type of stack exploitation that levrages a string copied into
+the stack to bypass NX/DEP protections. 
 
 ## Heap Exploitation
 ### Heap Layout
