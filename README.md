@@ -20,7 +20,7 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
 ## Stack Exploitation & Rop
 ### ROP
 Return Oriented Programming (ROP) is type of stack exploitation that levrages a string copied into
-the stack to bypass NX/DEP protections. 
+the stack to bypass NX/DEP protections. See tools.
 
 ## Heap Exploitation
 ### Heap Layout

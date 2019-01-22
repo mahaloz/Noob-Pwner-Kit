@@ -1,0 +1,4 @@
+pwndbg
+radare2
+pwntools
+ropper
