@@ -11,11 +11,10 @@ Binary Pwning can be devided into a few parts that tend to intertwine out in the
     1. Static Analysis
     2. Dynamic Analysis
     3. Weird Love Childs
-2. [Heap Exploitation](#heap-exploitation)
+2. [Heap Exploitation](#heap-exploitation) gotta add heap from SHELLPHISH
 3. [Stack Exploitation & ROP](#stack-exploitation-&-rop)
 4. [Shellcoding](#shellcoding)
 5. Network Program Exploitation
-6. Misc
 
 ## Stack Exploitation & Rop
 ### ROP
