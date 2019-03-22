@@ -57,15 +57,35 @@ When malloc() is activated we use chunks. Chunks are sorted in a few ways.
 1. Fast Bins
     It contains 10 types of chunks based on their size malloc() in bytes.
     ![alt text](https://cdn-images-1.medium.com/max/1600/1*vKesMDWlcOf0EHRMJKNIjg.png)
+    FIFO
 
     They are sorted in LIFO (Last In, First Out).
-2. Normal Bins
-    1. Unsorted: Only for temp bins being moved to other normal bins. Doubly linked.
+2. Other Bins
+    1. Unsorted: where freed small and large chunks end up in. Doubly linked.
     2. Small: 62 types just like fast starting at 8-bytes. Doubly linked, FIFO.
     3. Large: Chunks between 512 bytes - 128k bytes.
 Larger than that an mmap() does it directly.
 
-### Abusing linked chunks
+#### First-fit Behavior
+Consider the sample code:
+
+```c
+char *a = malloc(20);     // 0xe4b010
+char *b = malloc(20);     // 0xe4b030
+char *c = malloc(20);     // 0xe4b050
+char *d = malloc(20);     // 0xe4b070
+
+free(a);
+free(b);
+free(c);
+free(d);
+
+a = malloc(20);           // 0xe4b070
+b = malloc(20);           // 0xe4b050
+c = malloc(20);           // 0xe4b030
+d = malloc(20);           // 0xe4b010
+```
+This is due to the Fast Bin being FIFO.
 
 
 
