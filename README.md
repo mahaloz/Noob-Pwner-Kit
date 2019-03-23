@@ -86,7 +86,7 @@ c = malloc(20);           // 0xe4b030
 d = malloc(20);           // 0xe4b010
 ```
 This is due to the Fast Bin being FIFO.
-
+#TODO: ADD THE FASTBIN Attack
 
 
 
