@@ -1,4 +1,7 @@
 # Noob-Pwner-Kit
+## MOVING LOCATIONS:
+My small tutorial is moving to CTF Wiki...
+
 ## Purpose
 This kit was created to help me, and anyone else who is trying to takeup the dreaded
 art of binary pwning, find useful links to tools, challs, and tutorials. I have found
